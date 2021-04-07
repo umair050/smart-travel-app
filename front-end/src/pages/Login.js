@@ -9,6 +9,9 @@ const Login = ({navigation}) => {
     isValidUser: true,
     isValidPassword: true,
 });
+const goToCities=()=>{
+  navigation.navigate('Cities');
+}
  return (
         <View style={styles.cantainer}>
           <Text style={styles.headerTxt}>WELCOME</Text>
@@ -28,8 +31,10 @@ const Login = ({navigation}) => {
             <Text style={styles.errorMsg}>Password must be 8 character long</Text>
             </Animatable.View>
             }
-            <TouchableOpacity style={styles.btn} >
-              <Text style={styles.btnTxt}  >Login</Text>
+            <TouchableOpacity
+            onPress={goToCities}
+        style={styles.btn} >
+              <Text style={styles.btnTxt}>Login</Text>
             </TouchableOpacity>
             <View style={styles.endView}>
               <Text style={styles.endTxt}>Create an account?</Text>
@@ -40,10 +45,10 @@ const Login = ({navigation}) => {
               </TouchableOpacity>
             </View>
           </View>
+         
         </View>
       );
     }
-
     export default Login;
   const styles = StyleSheet.create({
     cantainer: {

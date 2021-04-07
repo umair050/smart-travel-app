@@ -6,15 +6,17 @@ import SignUp from './src/pages/SignUp';
 import {Provider} from "react-redux";
 import store from "./src/config/store";
 const Stack=createStackNavigator();
+
  function App(){
    return(
      <Provider store={store}>    
 <NavigationContainer>
-  <Stack.Navigator  initialRouteName="Login"
+  <Stack.Navigator  initialRouteName="Cities"
   screenOptions={{headerShown: false}}
 >
-    <Stack.Screen name="Login" component={Login} />
+   <Stack.Screen name="Login" component={Login} />
     <Stack.Screen name="SignUp" component={SignUp}/>
+
   </Stack.Navigator>
 </NavigationContainer>
 </Provider>
