@@ -7,7 +7,7 @@ const Login = ({navigation}) => {
     check_textInputChange: false,
     secureTextEntry: true,
     isValidUser: true,
-    isValidPassword: true,
+    isValidPassword: true,  
 });
 const goToCities=()=>{
   navigation.navigate('Cities');
@@ -52,7 +52,7 @@ const goToCities=()=>{
     export default Login;
   const styles = StyleSheet.create({
     cantainer: {
-      backgroundColor: '#521be3',
+      backgroundColor: '#04555c',
       height: 700,
     },
     subView: {
@@ -92,7 +92,7 @@ const goToCities=()=>{
     btn: {
       height: 50,
       width: 200,
-      backgroundColor: 'blue',
+      backgroundColor: '#04555c',
       borderRadius: 80,
       borderWidth: 2,
       marginLeft: 70,
