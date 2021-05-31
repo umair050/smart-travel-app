@@ -26,11 +26,9 @@ const SignUp = ({navigation}) => {
         </View>
       );
     }
-    export default SignUp;
-  
   const styles = StyleSheet.create({
     cantainer: {
-      backgroundColor: '#521be3',
+      backgroundColor: '#04555c',
       height: 700,
     },
     subView: {
@@ -46,11 +44,10 @@ const SignUp = ({navigation}) => {
       fontWeight: 'bold',
       color: 'white',
       position: 'absolute',
-      marginTop: 110,
+      marginTop: 100,
     },
     subTxt: {
       color: 'black',
-      marginTop: 15,
       fontSize: 30,
       fontWeight: 'bold',
       marginLeft: 40,
@@ -65,7 +62,7 @@ const SignUp = ({navigation}) => {
     btn: {
       height: 50,
       width: 200,
-      backgroundColor: 'blue',
+      backgroundColor: '#04555c',
       borderRadius: 80,
       borderWidth: 2,
       marginLeft: 70,
@@ -83,9 +80,9 @@ const SignUp = ({navigation}) => {
       justifyContent: 'space-between',
     },
     endTxt: {
-      fontSize: 15,
-      marginTop: 20,
-      marginLeft: 70,
+      fontSize: 16,
+      marginTop: 10,
+      marginLeft: 55,
       fontWeight: 'bold',
     },
     endBtn: {
@@ -94,8 +91,7 @@ const SignUp = ({navigation}) => {
     loginTxt: {
       fontSize: 20,
       fontWeight: 'bold',
-      marginTop: 13,
+      marginTop: 5,
     },
   });
- 
-  
+  export default SignUp;
