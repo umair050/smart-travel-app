@@ -28,7 +28,7 @@ const SignUp = ({navigation}) => {
     }
   const styles = StyleSheet.create({
     cantainer: {
-      backgroundColor: '#04555c',
+      backgroundColor: '#04555c',  
       height: 700,
     },
     subView: {

@@ -8,7 +8,7 @@ const Cities = ({navigation}) => {
   const goTomapScreen=()=>{
     navigation.navigate('mapScreen');
   }
-  const goToprofile=()=>{
+  const goToprofile=()=>{  
     navigation.navigate('profile');
   }
   const Card = ({place}) => {

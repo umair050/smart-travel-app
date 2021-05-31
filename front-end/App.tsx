@@ -33,6 +33,6 @@ const   App=()=>{
   </Stack.Navigator>
 </NavigationContainer>
 </Provider>
-   );
+   );  
  }
-export default App;
+export default App;  

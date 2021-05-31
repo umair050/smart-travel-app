@@ -7,7 +7,7 @@ const Login = ({navigation}) => {
     check_textInputChange: false,
     secureTextEntry: true,
     isValidUser: true,
-    isValidPassword: true,
+    isValidPassword: true,  
 });
 const goToCities=()=>{
   navigation.navigate('Cities');
