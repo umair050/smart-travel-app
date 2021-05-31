@@ -5,7 +5,7 @@ const Addresspickup =({placeholderText,fetchAddress})=>{
     const GOOGLE_MAPS_APIKEY ='AIzaSyAjL_doMA-BBX1S-Lx_BJXrPAjQCFh3UrM';
     const onPressAddress =(data,details)=>{
         //console.log("details===>>>",details)
-        const lat = details.geometry.location.lat
+      const lat = details.geometry.location.lat
         const lng = details.geometry.location.lng
         fetchAddress(lat,lng) 
     }

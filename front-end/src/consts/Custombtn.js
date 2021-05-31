@@ -11,7 +11,7 @@ const Custombtn=({
         style={{...styles.btnStyle,...btnStyle}}>
 <Text>{btnText}</Text>
         </TouchableOpacity>
-    );
+    ); 
 };
 const styles=StyleSheet.create({
     btnStyle:{

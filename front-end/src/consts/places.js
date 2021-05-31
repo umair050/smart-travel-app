@@ -1,6 +1,6 @@
 const places = [
     {
-      id: '1',
+      id: '1', 
       name: 'Naran',
       location: 'saif-ul-malook',
       image: require('../assets/saif-ul-malook.png'),

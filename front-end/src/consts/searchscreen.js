@@ -3,7 +3,7 @@ import {StyleSheet,View} from 'react-native';
 import {createStackNavigator} from 'react-navigation-stack'
 import{createAppContainer} from "react-navigation";
  const mystack=createStackNavigator({
-  home:mystack  
+  home:mystack   
 },{
   defaultNavigationOptions:{
     title:'travel guide',
