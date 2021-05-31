@@ -7,7 +7,7 @@ const Addresspickup =({placeholderText,fetchAddress})=>{
         //console.log("details===>>>",details)
         const lat = details.geometry.location.lat
         const lng = details.geometry.location.lng
-        fetchAddress(lat,lng)
+        fetchAddress(lat,lng) 
     }
     return(
      <View style={styles.container}>

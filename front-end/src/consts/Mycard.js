@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Image } from 'react-native';
 import { Card, Paragraph, Title} from 'react-native-paper';
  export default function Mycard(props){
-return(
+return( 
                 <View style={{margin:5}}>
                     <Card style={{elevation:4}}>
                     <View style={{flexDirection:"row",padding:10}}>

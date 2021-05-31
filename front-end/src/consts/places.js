@@ -6,7 +6,7 @@ const places = [
       image: require('../assets/saif-ul-malook.png'),
       hospital: require('../assets/bhu-naran-hospital.jpg'),
       hotel: require('../assets/sayyam-heights-naran.jpg'),
-      
+        
        },
     {
       id: '2',
