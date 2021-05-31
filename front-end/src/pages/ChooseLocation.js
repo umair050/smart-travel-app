@@ -6,7 +6,7 @@ import Custombtn from '../consts/Custombtn';
 const ChooseLocation =(props)=>{
     const navigation=useNavigation()
     const [state,setState]=useState({
-        pickupCord:{}, 
+        pickupCord:{},  
         destinationCord:{}
     })
     const  {pickupCord, destinationCord} = state
