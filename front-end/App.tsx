@@ -13,6 +13,7 @@ import DetailScreen from './src/pages/DetailScreen';
 import hospitalScreen from './src/pages/hospitalScreen';
 import weather from './src/pages/weather';
 import hotelsScreen from './src/pages/hotelsScreen';
+import currencyconvertor from './src/pages/currencyconvertor';
 const Stack = createStackNavigator();
 const   App=()=>{
    return(
@@ -28,6 +29,7 @@ const   App=()=>{
    <Stack.Screen name="hospitalScreen" component={hospitalScreen} />
    <Stack.Screen name="weather" component={weather} />
    <Stack.Screen name="hotelsScreen" component={hotelsScreen} />
+   <Stack.Screen name="currencyconvertor" component={currencyconvertor} />
    <Stack.Screen name="profile" component={profile} />
     <Stack.Screen name="SignUp" component={SignUp}/> 
   </Stack.Navigator>
