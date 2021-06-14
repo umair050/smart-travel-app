@@ -7,7 +7,7 @@ import Header from '../consts/Header';
         return(
             <View> 
                <Header name="Hospital"/> 
-                <ScrollView >
+                <ScrollView >  
                 <Mycard name="hospital 1"/>
                 <Mycard name="hospital 2"/>
                 <Mycard name="hospital 3"/>
