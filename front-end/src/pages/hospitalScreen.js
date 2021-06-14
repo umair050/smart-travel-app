@@ -5,7 +5,7 @@ import Header from '../consts/Header';
  export default class hospitalScreen extends React.Component{
     render(){
         return(
-            <View>
+            <View> 
                <Header name="Hospital"/> 
                 <ScrollView >
                 <Mycard name="hospital 1"/>

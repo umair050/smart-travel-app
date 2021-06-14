@@ -49,6 +49,10 @@ const DetailScreen = ({navigation,route}) => {
         <ImageBackground source={place.hospital}
             style={style.image}>
          <Text style={style.hospital}>Hospitals</Text>
+         <TouchableOpacity
+                onPress={() => navigation.navigate('currencyconvertor')}>
+            <Text style={style.currency}>currencyconvertor </Text> 
+             </TouchableOpacity> 
         </ImageBackground>
         </TouchableOpacity>
         </View>
@@ -58,6 +62,10 @@ const DetailScreen = ({navigation,route}) => {
          <ImageBackground  source={place.hotel}
             style={style.image}>
             <Text style={style.hotels}>Hotels </Text> 
+            <TouchableOpacity
+                onPress={() => navigation.navigate('currencyconvertor')}>
+            <Text style={style.currency}>currencyconvertor </Text> 
+             </TouchableOpacity>
             </ImageBackground>
             </TouchableOpacity>
     </View>
@@ -108,6 +116,13 @@ hotels:{
  fontWeight:'bold',
  fontSize:18,
  padding:10
-}
+},
+currency:{
+  color:'#fff',
+  fontWeight:'bold',
+  fontSize:26,
+  paddingRight:40,
+  paddingTop:50
+ }
 });
 

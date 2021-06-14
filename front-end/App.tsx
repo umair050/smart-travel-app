@@ -11,10 +11,11 @@ import {Provider} from "react-redux";
 import store from "./src/config/store";
 import DetailScreen from './src/pages/DetailScreen';
 import hospitalScreen from './src/pages/hospitalScreen';
+
 import weather from './src/pages/weather';
 import hotelsScreen from './src/pages/hotelsScreen';
 const Stack = createStackNavigator();
-const   App=()=>{
+const   App=()=>{ 
    return(
      <Provider store={store}>    
 <NavigationContainer>

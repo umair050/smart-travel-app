@@ -4,7 +4,7 @@ import {SafeAreaView, ScrollView,StatusBar,StyleSheet,View,Text,TextInput,ImageB
 import Icon from 'react-native-vector-icons/MaterialIcons';
 const {width} = Dimensions.get('screen');
 import places from '../consts/places';
-const Cities = ({navigation}) => {
+const Cities = ({navigation}) => { 
   const goTomapScreen=()=>{
     navigation.navigate('mapScreen');
   } 
