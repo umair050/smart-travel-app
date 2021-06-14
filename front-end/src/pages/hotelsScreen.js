@@ -1,11 +1,12 @@
 import React from 'react';
 import {Text,View,ScrollView  } from 'react-native';
 import Mycard from '../consts/Mycard';
-
+import Header from '../consts/Header';
  export default class hotelsScreen extends React.Component{
     render(){
         return(
             <View>
+            <Header name="Hotels"/>
                 <ScrollView >
                 <Mycard name="hotels 1"/>
                 <Mycard name="hotels 2"/>

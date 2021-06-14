@@ -8,7 +8,7 @@ const Cities = ({navigation}) => {
   const goTomapScreen=()=>{
     navigation.navigate('mapScreen');
   }
-  const goToprofile=()=>{  
+  const goToprofile=()=>{
     navigation.navigate('profile');
   }
   const Card = ({place}) => {
@@ -95,7 +95,7 @@ const Cities = ({navigation}) => {
               <Icon name="search" size={28} />
               <TextInput
                 placeholder="Search place"
-                style={{color:'#dddedd' }}
+                style={{color:'#000' }}
               />
             </View>
           </View>
