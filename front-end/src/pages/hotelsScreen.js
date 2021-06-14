@@ -5,7 +5,7 @@ import Header from '../consts/Header';
  export default class hotelsScreen extends React.Component{  
     render(){  
         return(
-            <View>
+            <View> 
             <Header name="Hotels"/>  
                 <ScrollView >
                 <Mycard name="hotels 1"/>

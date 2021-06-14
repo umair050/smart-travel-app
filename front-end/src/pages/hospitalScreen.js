@@ -4,7 +4,7 @@ import Mycard from '../consts/Mycard';
 import Header from '../consts/Header'; 
  export default class hospitalScreen extends React.Component{
     render(){
-        return(
+        return( 
             <View> 
                <Header name="Hospital"/> 
                 <ScrollView >  

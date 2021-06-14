@@ -50,7 +50,7 @@ source={{uri:"https://images.unsplash.com/photo-1549492423-400259a2e574?ixlib=rb
     <View style={styles.cardcontent}>
     <Entypo name="log-out" size={32} color="#04555c"/>
     <Text style={styles.mytext}>Log-out</Text>
-    </View>   
+    </View>    
 </Card>
 </TouchableOpacity>
         </View>  

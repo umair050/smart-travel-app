@@ -8,7 +8,7 @@ return(
     <Text style={{fontSize:25 ,color:'#fff',fontWeight:'bold'}}>{props.name}</Text>
     </View>
     </LinearGradient> 
-)
+) 
     }
  
 const styles=StyleSheet.create({
