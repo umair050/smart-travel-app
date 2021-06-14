@@ -11,7 +11,6 @@ import {Provider} from "react-redux";
 import store from "./src/config/store";
 import DetailScreen from './src/pages/DetailScreen';
 import hospitalScreen from './src/pages/hospitalScreen';
-
 import weather from './src/pages/weather';
 import hotelsScreen from './src/pages/hotelsScreen';
 const Stack = createStackNavigator();
@@ -28,7 +27,6 @@ const   App=()=>{
    <Stack.Screen name="ChooseLocation" component={ChooseLocation}/>
    <Stack.Screen name="DetailScreen" component={DetailScreen} />
    <Stack.Screen name="hospitalScreen" component={hospitalScreen} />
-   
    <Stack.Screen name="weather" component={weather} />
    <Stack.Screen name="hotelsScreen" component={hotelsScreen} />
     <Stack.Screen name="SignUp" component={SignUp}/> 

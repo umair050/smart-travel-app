@@ -7,7 +7,7 @@ import places from '../consts/places';
 const Cities = ({navigation}) => {
   const goTomapScreen=()=>{
     navigation.navigate('mapScreen');
-  }
+  } 
   const goToprofile=()=>{
     navigation.navigate('profile');
   }

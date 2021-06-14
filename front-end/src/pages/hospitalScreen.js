@@ -6,7 +6,7 @@ import Header from '../consts/Header';
     render(){
         return(
             <View>
-               <Header name="Hospital"/>
+               <Header name="Hospital"/> 
                 <ScrollView >
                 <Mycard name="hospital 1"/>
                 <Mycard name="hospital 2"/>

@@ -1,15 +1,13 @@
 import React from "react";
 import{View,StyleSheet,Text} from "react-native";
-import{ Ionicons} from "@expo/vector-icons";
 import {LinearGradient} from "expo-linear-gradient"
 export default function Header(props){
 return(
 <LinearGradient colors={[colors.white, colors.green]} start={[-0.5,-0.5]} end={[1,1]}>
     <View style={{ marginHorizontal:20, paddingVertical:35}}>
-
     <Text style={{fontSize:25 ,color:'#fff',fontWeight:'bold'}}>{props.name}</Text>
     </View>
-    </LinearGradient>
+    </LinearGradient> 
 )
     }
  

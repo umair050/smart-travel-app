@@ -53,7 +53,7 @@ source={{uri:"https://images.unsplash.com/photo-1549492423-400259a2e574?ixlib=rb
     </View>
 </Card>
 </TouchableOpacity>
-        </View>
+        </View> 
     );
 }
 const styles=StyleSheet.create({
