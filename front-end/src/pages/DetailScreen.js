@@ -83,7 +83,7 @@ const style = StyleSheet.create({
    heading:{    
     fontSize:18,
     fontWeight:'bold',
-    paddingLeft:35  
+    paddingLeft:55 
    },
    name:{
     flexDirection:'row',
@@ -92,7 +92,7 @@ const style = StyleSheet.create({
     width:'100%'
 },
    image:{
-    marginLeft:30,
+    marginLeft:55,
     width:300,
     height:150,
     marginTop:5,

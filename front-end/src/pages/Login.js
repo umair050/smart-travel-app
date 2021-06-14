@@ -53,7 +53,7 @@ const goToCities=()=>{
   const styles = StyleSheet.create({
     cantainer: {
       backgroundColor: '#04555c',
-      height: 700,
+      height: 600,
     },
     subView: {
       backgroundColor: 'white',
@@ -77,7 +77,7 @@ const goToCities=()=>{
     },
     subTxt: {
       color: 'black',
-      marginTop: 20,
+      marginTop: 30,
       fontSize: 30,
       fontWeight: 'bold',
       marginLeft: 40,
@@ -85,9 +85,9 @@ const goToCities=()=>{
     nameInput: {
       height: 40,
       width: 270,
-      marginLeft: 40,
+      marginLeft: 45,
       borderBottomWidth: 1,
-      marginTop: 30,
+      marginTop: 50,
     },
     btn: {
       height: 50,
@@ -112,11 +112,11 @@ const goToCities=()=>{
     endTxt: {
       fontSize: 15,
       marginTop: 30,
-      marginLeft: 60,
+      marginLeft: 80,
       fontWeight: 'bold',
     },
     endBtn: {
-      marginRight:110,
+      marginRight:130,
     },
     loginTxt: {
       fontSize: 20,
