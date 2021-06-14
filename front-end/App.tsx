@@ -17,7 +17,7 @@ import hotelsScreen from './src/pages/hotelsScreen';
 const Stack = createStackNavigator();
 const   App=()=>{ 
    return(
-     <Provider store={store}>    
+     <Provider store={store}>     
 <NavigationContainer>
   <Stack.Navigator  
   screenOptions={{headerShown: false}}>

@@ -1,7 +1,7 @@
 import React from "react";  
 import{View,StyleSheet,Text} from "react-native";
 import {LinearGradient} from "expo-linear-gradient"
-export default function Header(props){
+export default function Header(props){ 
 return(
 <LinearGradient colors={[colors.white, colors.green]} start={[-0.5,-0.5]} end={[1,1]}>
     <View style={{ marginHorizontal:20, paddingVertical:35}}>
