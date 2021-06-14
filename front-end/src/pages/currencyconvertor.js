@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     color: "#000"
   },
   text:{
-      fontSize:30,
+      fontSize:3,
       fontWeight:'bold'
   }
 });

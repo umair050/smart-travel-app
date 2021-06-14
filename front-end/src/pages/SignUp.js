@@ -29,7 +29,7 @@ const SignUp = ({navigation}) => {
   const styles = StyleSheet.create({
     cantainer: {
       backgroundColor: '#04555c',  
-      height: 700,
+      height: 600,
     },
     subView: {
       backgroundColor: 'white',
@@ -57,7 +57,7 @@ const SignUp = ({navigation}) => {
       width: 270,
       marginLeft: 40,
       borderBottomWidth: 1,
-      marginTop: 10,
+      marginTop: 20,
     },
     btn: {
       height: 50,
@@ -86,7 +86,7 @@ const SignUp = ({navigation}) => {
       fontWeight: 'bold',
     },
     endBtn: {
-      marginRight: 100,
+      marginRight: 130,
     },
     loginTxt: {
       fontSize: 20,
