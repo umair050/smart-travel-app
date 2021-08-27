@@ -92,10 +92,13 @@ const Cities = ({navigation}) => {
           <View style={{flex: 1}}>
             <Text style={style.headerTitle}>Smart Travel Guide </Text>
             <View style={style.inputContainer}>
+              <TouchableOpacity 
+                onPress={() => navigation.navigate('DetailScreen')}>
               <Icon name="search" size={28} />
+              </TouchableOpacity>
               <TextInput
                 placeholder="Search place"
-                style={{color:'#dddedd' }}
+                style={{color:'#000' }}
               />
             </View>
           </View>

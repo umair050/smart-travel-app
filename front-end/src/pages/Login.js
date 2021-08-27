@@ -1,38 +1,51 @@
-import React, { Component } from 'react';
+import React, { Component ,useEffect,useState} from 'react';
+// import * as firebase from 'firebase';
+//import { Alert } from 'react-native';
 import {Text,View,StyleSheet,TextInput,TouchableOpacity} from 'react-native';
-const Login = ({navigation}) => {
-  const [data, setData] = React.useState({
-    username: '',
-    password: '',
-    check_textInputChange: false,
-    secureTextEntry: true,
-    isValidUser: true,
-    isValidPassword: true,  
-});
-const goToCities=()=>{
-  navigation.navigate('Cities');
-}
+import {login, subscribeToAuth} from '../consts/loginController';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+export default function Login ({navigation}) {
+  const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    onLoginPress=()=>{
+      login(email, password, loginComplete) 
+    }
+  
+    const loginComplete = () => {
+      navigation.navigate("Cities")
+    }
+  
+    // useEffect(() => {
+    //   subscribeToAuth(authStateChanged)
+    // })
+  
+  
+    // const authStateChanged = (user) => {
+    //   if(user !== null){
+    //     navigation.navigate("Cities")
+    //   }
+    //   // firebase.auth().signInWithEmailAndPassword(email, password)
+    //   //     .then(()=>{
+    //   //       navigation.navigate("Cities")
+    //   //     }).catch(error=>{
+    //   //       Alert.alert(error.message)
+    //   //     })
+    //     }
+
  return (
-        <View style={styles.cantainer}>
+   <KeyboardAwareScrollView>
+        <View style={styles.container}>
           <Text style={styles.headerTxt}>WELCOME</Text>
           <View style={styles.subView}>
             <Text style={styles.subTxt}>Login</Text>
             <TextInput style={styles.nameInput} placeholder="Username"  
-             />
-            {data.isValidUser ? null:
-            <Animatable.View animation="fadeinleft" duration={500}>
-            <Text style={styles.errorMsg}>Username must be 4 character long</Text>
-            </Animatable.View>
-            }
+              onChangeText={(text) => setEmail(text)}
+              value={email}/>
             <TextInput style={styles.nameInput} secureTextEntry={true}
-             placeholder="Password"  />
-            {data.isValidPassword ? null:
-            <Animatable.View animation="fadeinleft" duration={500}>
-            <Text style={styles.errorMsg}>Password must be 8 character long</Text>
-            </Animatable.View>
-            }
+             placeholder="Password"  onChangeText={(text) => setPassword(text)}
+                    value={password}/>
             <TouchableOpacity
-            onPress={goToCities}
+          onPress={()=>onLoginPress()}
         style={styles.btn} >
               <Text style={styles.btnTxt}>Login</Text>
             </TouchableOpacity>
@@ -40,25 +53,24 @@ const goToCities=()=>{
               <Text style={styles.endTxt}>Create an account?</Text>
               <TouchableOpacity
                 style={styles.endBtn}
-                onPress={() => navigation.navigate('SignUp')}>
+                onPress={()=>navigation.navigate('SignUp')}>
                 <Text style={styles.loginTxt}>SignUp</Text>
               </TouchableOpacity>
             </View>
           </View>
-         
         </View>
+        </KeyboardAwareScrollView>
       );
     }
-    export default Login;
   const styles = StyleSheet.create({
-    cantainer: {
+    container: {
       backgroundColor: '#04555c',
       height: 600,
     },
     subView: {
       backgroundColor: 'white',
-      height: 430,
-      marginTop: 200,
+      height: 450,
+      marginTop: 210,
       borderTopRightRadius: 40,
       borderTopLeftRadius: 40,
     },

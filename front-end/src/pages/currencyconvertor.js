@@ -37,13 +37,13 @@ const currencyconvertor = () => {
         >
             <Text style={styles.text}>CONVERT HERE</Text>
             <View>
-              <Text>Source Amount</Text>
+              <Text style={styles.subtext}>Source Amount</Text>
               <TextInput
                 style={styles.textInput}
                 onChangeText={value => setSourceAmount(value)}
                 value={sourceAmount}
               />
-              <Text>Select Source Currency</Text>
+              <Text style={styles.subtext}>Select Source Currency</Text>
               <DropDownPicker
                 style={styles.textInput}
                 onChangeText={value => setSourceCurrency(value)}
@@ -58,13 +58,13 @@ const currencyconvertor = () => {
               />
             </View>
             <View>
-              <Text>Target Amount</Text>
+              <Text style={styles.subtext}>Target Amount</Text>
               <TextInput
                 style={styles.textInput}
                 editable={false}
                 value={targetAmount}
               />
-              <Text>Select Target Currency</Text>
+              <Text style={styles.subtext}>Select Target Currency</Text>
               <DropDownPicker
                 style={styles.textInput}
                 onChangeText={value => setTargetCurrency(value)}
@@ -98,12 +98,19 @@ const styles = StyleSheet.create({
     backgroundColor: "#04555c"
   },
   textInput: {
+    fontSize:20,
     marginBottom: 10,
     backgroundColor: "lightgrey",
     color: "#000"
   },
   text:{
-      fontSize:3,
+      fontSize:35,
+      fontWeight:'bold',
+      textAlign:'center',
+      justifyContent:'center'
+  },
+  subtext:{
+    fontSize:20,
       fontWeight:'bold'
   }
 });

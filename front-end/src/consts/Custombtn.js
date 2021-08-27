@@ -3,7 +3,7 @@ import { TouchableOpacity } from 'react-native';
 import{ View,StyleSheet,Text} from 'react-native';
 const Custombtn=({
     onPress=()=>{},
-    btnStyle={},
+    btnStyle={}, 
     btnText
 })=>{ 
     return(

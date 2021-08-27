@@ -2,6 +2,7 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { ImageBackground,SafeAreaView,StatusBar,StyleSheet,View,Text,} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import {FontAwesome5 } from '@expo/vector-icons';
 const DetailScreen = ({navigation,route}) => {
  const place = route.params;
   return (
@@ -37,8 +38,17 @@ const DetailScreen = ({navigation,route}) => {
          {place.location}
          </Text>
          <TouchableOpacity
-         onPress={() => navigation.navigate('weather',place)}>
-         <Text >Weather in {place.name} </Text>
+         onPress={() => navigation.navigate('weather')}>
+         <Text  style={{
+              width: '50%',
+              fontSize: 20,
+              fontWeight: 'bold',
+              color: '#fff',
+            }} >Weather <FontAwesome5
+            name="cloud-sun"
+            color='#fff'
+            size={30} color='#fff'
+          /> </Text>
          </TouchableOpacity>
          </View>
       </ImageBackground>

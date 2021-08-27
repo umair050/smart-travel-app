@@ -7,10 +7,6 @@ const LATITUDE_DELTA= 0.0922;
 const LONGITUDE_DELTA=LATITUDE_DELTA+ASPECT_RATIO
 import MapViewDirections from 'react-native-maps-directions';
 import imagePath from '../consts/imagePath';
-import { LogBox } from 'react-native';
-LogBox.ignoreLogs([
-  'Non-serializable values were found in the navigation state',
-]);
 const mapScreen = ({navigation}) => {
     const GOOGLE_MAPS_APIKEY ='AIzaSyAjL_doMA-BBX1S-Lx_BJXrPAjQCFh3UrM';
     const mapRef=useRef()
@@ -39,7 +35,6 @@ longitude:73.04329,
                 longitude:data.destinationCord.longitude,
             }
     })
-     console.log("data===>>>",data)
     }
     return (
         <View style={{flex:1}}>
@@ -53,9 +48,9 @@ longitude:73.04329,
         longitudeDelta:LONGITUDE_DELTA,
     }}>
   <Marker
-    image={imagePath.icGreenMarker}
+    image={imagePath.icCurLoc}
       coordinate={startingCord}/>
-  <Marker
+  <Marker 
    image={imagePath.icGreenMarker}
       coordinate={destinationCord}/>
   <MapViewDirections

@@ -7,7 +7,7 @@ const ChooseLocation =(props)=>{
     const navigation=useNavigation()
     const [state,setState]=useState({
         pickupCord:{}, 
-        destinationCord:{}
+        destinationCord:{} 
     })
     const  {pickupCord, destinationCord} = state
     const onDone=()=>{
@@ -20,7 +20,7 @@ const ChooseLocation =(props)=>{
     const fetchAddressCord=(lat,lng) => {
         setState({
             ...state, pickupCord:{
-                lattitude:lat,
+                latitude:lat,
                 longitude:lng
             }
         })
@@ -28,14 +28,11 @@ const ChooseLocation =(props)=>{
     const fetchdestinationCord=(lat,lng) => {
         setState({
             ...state,destinationCord:{
-                lattitude:lat,
+                latitude:lat,
                 longitude:lng
             }
         })
     }
-    console.log("props==>>>",props)
-    //console.log("pickup cord===>>>",pickupCord)
-    //console.log("pickup cord===>>>",destinationCord)
     return(
      <View style={styles.container}>
      <ScrollView
