@@ -1,4 +1,4 @@
-import React,{ Component } from 'react';
+import React from 'react';
 import { NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import * as firebase from 'firebase';
@@ -12,8 +12,6 @@ import mapScreen from './src/pages/mapScreen';
 import ChooseLocation from './src/pages/ChooseLocation';
 import SignUp from './src/pages/SignUp';
 import profile from './src/pages/profile';
-import {Provider} from "react-redux";
-import store from "./src/config/store";
 import DetailScreen from './src/pages/DetailScreen';
 import hospitalScreen from './src/pages/hospitalScreen';
 import NaranHotels from './src/pages/NaranHotels';
@@ -27,11 +25,10 @@ import LahoreHospitals from './src/pages/LahoreHospitals';
 import weather from './src/pages/weather';
 import hotelsScreen from './src/pages/hotelsScreen';
 import currencyconvertor from './src/pages/currencyconvertor';
-import updateprofile from './src/pages/updateprofile';
 const Stack = createStackNavigator();
 const   App=()=>{
    return(
-     <Provider store={store}>    
+     
 <NavigationContainer>
   <Stack.Navigator  
   screenOptions={{headerShown: false}}>
@@ -52,12 +49,11 @@ const   App=()=>{
    <Stack.Screen name="weather" component={weather} />
    <Stack.Screen name="hotelsScreen" component={hotelsScreen} />
    <Stack.Screen name="currencyconvertor" component={currencyconvertor} />
-   <Stack.Screen name="updateprofile" component={updateprofile} />
    <Stack.Screen name="profile" component={profile} />
     <Stack.Screen name="SignUp" component={SignUp}/> 
   </Stack.Navigator>
 </NavigationContainer>
-</Provider>
+
    );  
  }
 export default App;  

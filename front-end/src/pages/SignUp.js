@@ -1,27 +1,44 @@
-import React, { Component,useState } from 'react';
-// import * as firebase from 'firebase';
-// import { Alert } from 'react-native';
-import {Text,View,StyleSheet,TextInput,TouchableOpacity} from 'react-native';
-import {signUp}from '../consts/loginController';
+import React, {useState } from 'react';
+import {Text,View,Alert,StyleSheet,TextInput,TouchableOpacity} from 'react-native';
+import {registration}from '../consts/loginController';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 export default function  SignUp({navigation}){
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('') 
+  const emptyState = () => {
+    setName('');
+    setEmail('');
+    setPassword('');
+    setConfirmPassword('');
+  }; 
     const  onRegisterPress=()=>{
-      signUp(email, password,name, signUpComplete)
+      if (!name) {
+        Alert.alert(' name is required');
+      } else if (!email) {
+        Alert.alert('Email field is required.');
+      } else if (!password) {
+        Alert.alert('Password field is required.');
+      } else if (!confirmPassword) {
+        setPassword('');
+        Alert.alert('Confirm password field is required.');
+      } else if (password !== confirmPassword) {
+        Alert.alert('Password does not match!');
+      } else {
+        registration(
+          email,
+          password,
+          name,
+          registrationComplete
+        );
+      }
     }
-  
-    const signUpComplete = () => {
-      navigation.navigate("Cities")
-      // firebase.auth().createUserWithEmailAndPassword(email, password)
-      //       .then(()=>{
-      //         navigation.navigate('Login')
-      //       }).catch(error=>{
-      //         Alert.alert(error.message)
-      //       })
-          } 
+    const registrationComplete = () => {
+        navigation.navigate('Cities');
+        emptyState();
+      }
+     
   return (
     <KeyboardAwareScrollView>
         <View style={styles.container}>

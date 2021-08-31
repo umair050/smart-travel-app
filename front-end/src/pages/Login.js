@@ -1,48 +1,36 @@
-import React, { Component ,useEffect,useState} from 'react';
-// import * as firebase from 'firebase';
-//import { Alert } from 'react-native';
-import {Text,View,StyleSheet,TextInput,TouchableOpacity} from 'react-native';
-import {login, subscribeToAuth} from '../consts/loginController';
+import React, { useState} from 'react';
+import {Text,View,Alert,StyleSheet,TextInput,TouchableOpacity} from 'react-native';
+import {login} from '../consts/loginController';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 export default function Login ({navigation}) {
   const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     onLoginPress=()=>{
-      login(email, password, loginComplete) 
+      if (!email) {
+        Alert.alert('Email field is required.');
+      }
+      if (!password) {
+        Alert.alert('Password field is required.');
+      }
+      login(email, password,loginComplete)
     }
-  
     const loginComplete = () => {
+      setEmail('');
+      setPassword('');
       navigation.navigate("Cities")
-    }
+    };
   
-    // useEffect(() => {
-    //   subscribeToAuth(authStateChanged)
-    // })
-  
-  
-    // const authStateChanged = (user) => {
-    //   if(user !== null){
-    //     navigation.navigate("Cities")
-    //   }
-    //   // firebase.auth().signInWithEmailAndPassword(email, password)
-    //   //     .then(()=>{
-    //   //       navigation.navigate("Cities")
-    //   //     }).catch(error=>{
-    //   //       Alert.alert(error.message)
-    //   //     })
-    //     }
-
- return (
+    return (
    <KeyboardAwareScrollView>
         <View style={styles.container}>
           <Text style={styles.headerTxt}>WELCOME</Text>
           <View style={styles.subView}>
             <Text style={styles.subTxt}>Login</Text>
-            <TextInput style={styles.nameInput} placeholder="Username"  
-              onChangeText={(text) => setEmail(text)}
+            <TextInput style={styles.nameInput} placeholder="email"  
+              onChangeText={(email) => setEmail(email)}
               value={email}/>
             <TextInput style={styles.nameInput} secureTextEntry={true}
-             placeholder="Password"  onChangeText={(text) => setPassword(text)}
+             placeholder="Password"  onChangeText={(password) => setPassword(password)}
                     value={password}/>
             <TouchableOpacity
           onPress={()=>onLoginPress()}

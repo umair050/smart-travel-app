@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import DropDownPicker from 'react-native-dropdown-picker';
 import {SafeAreaView, StatusBar,StyleSheet,TextInput,View,Text,Button,ActivityIndicator} from 'react-native';
 import { fetchCurrencyLatest, convertCurrencyAPI } from '../consts/api';
-
 const currencyconvertor = () => {
   const [currencyList, setCurrencyList] = useState([]);
   const [open, setOpen] = useState(false);
@@ -12,12 +11,10 @@ const currencyconvertor = () => {
   const [targetAmount, setTargetAmount] = useState("0");
   const [targetCurrency, setTargetCurrency] = useState("");
   const [loading, setLoading] = useState(false);
-
   useEffect(() => {
     fetchCurrencyLatest()
       .then(list => setCurrencyList(list))
   }, [])
-
   const convertCurrency = (amount, sourceCurrency, targetCurrency) => {
     setLoading(true);
     convertCurrencyAPI(amount, sourceCurrency, targetCurrency)
@@ -27,7 +24,6 @@ const currencyconvertor = () => {
         setLoading(false);
       })
   }
-
   return (
     <SafeAreaView>
       <StatusBar />
